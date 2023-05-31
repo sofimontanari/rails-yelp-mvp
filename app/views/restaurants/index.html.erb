@@ -1,0 +1,11 @@
+<div class="container mt-5 d-flex">
+    <div class="container">
+      <h1 class="ms-1 "> Restaurants </h1>
+      <% @restaurants.each do |restaurant| %>
+          <div class="container mt-5 ms-1 p-3 shadow w-75">
+            <h5><%= link_to restaurant.name, restaurant_path(restaurant), class: "text-decoration-none font-monospace" %></h5>
+          </div>
+      <% end %>
+    </div>
+    <%= link_to "New Restaurant", new_restaurant_path, class:"btn btn-primary py-0", style:"height:50px" %>
+</div>
